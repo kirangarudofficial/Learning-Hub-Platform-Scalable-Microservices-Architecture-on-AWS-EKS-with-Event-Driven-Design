@@ -23,13 +23,13 @@ This platform follows a **microservices architecture** with clean separation of 
 │ • Vite Build    │    │ • API Gateway    │    │ • Payment Service   │
 │ • Axios Client  │    │ • Circuit Breaker│    │ • Media Service     │
 └─────────────────┘    │ • Monitoring     │    │ • Notification Svc  │
-                       │ • Health Checks  │    │ • Progress Service    │
+                       │ • Health Checks  │    │ • Progress Service  │
                        └──────────────────┘    │ • Assessment Svc    │
-                                               │ • Certificate Svc     │
-                                               │ • Admin Service       │
-                                               │ • Content Service     │
-                                               │ • Gamification Svc    │
-                                               │ • Review Service      │
+                                               │ • Certificate Svc   │
+                                               │ • Admin Service     │
+                                               │ • Content Service   │
+                                               │ • Gamification Svc  │
+                                               │ • Review Service    │
                                                └─────────────────────┘
         │                        │                        │
         ▼                        ▼                        ▼
