@@ -1,0 +1,13 @@
+/**
+ * Jenkinsfile for backend microservices deployment
+ * Uses the shared library for deployment
+ */
+@Library('microservices-deployment') _
+
+// Deploy all backend services
+deployBackend(
+    nodeVersion: '18',
+    registry: 'docker.io',
+    tag: "v1.0.${BUILD_NUMBER}",
+    environment: 'staging'
+)

@@ -1,0 +1,13 @@
+/**
+ * Jenkinsfile for deploying a specific service
+ * Demonstrates direct use of the DeploymentHelper class
+ */
+@Library('microservices-deployment') _
+
+// Deploy a specific service using the helper
+deployService(
+    service: 'user-service',
+    tag: "v1.0.${BUILD_NUMBER}",
+    environment: 'staging',
+    registry: 'docker.io'
+)

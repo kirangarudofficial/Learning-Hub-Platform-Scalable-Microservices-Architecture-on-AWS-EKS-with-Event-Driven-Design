@@ -1,0 +1,14 @@
+/**
+ * Jenkinsfile for frontend deployment
+ * Uses the shared library for deployment
+ */
+@Library('microservices-deployment') _
+
+deployFrontend(
+    nodeVersion: '18',
+    buildDir: 'dist',
+    registry: 'docker.io',
+    imageName: 'learning-hub-frontend',
+    tag: "v1.0.${BUILD_NUMBER}",
+    environment: 'staging'
+)

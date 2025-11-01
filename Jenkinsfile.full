@@ -1,0 +1,15 @@
+/**
+ * Jenkinsfile for full platform deployment (frontend + backend)
+ * Uses the shared library for deployment
+ */
+@Library('microservices-deployment') _
+
+// Deploy both frontend and backend services
+deployMicroservices(
+    nodeVersion: '18',
+    frontendBuildDir: 'dist',
+    backendServices: [], // Empty array means deploy all services
+    registry: 'docker.io',
+    tag: "v1.0.${BUILD_NUMBER}",
+    environment: 'staging'
+)
